@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "394553229867",
+    "project_id": "carvia-bdd69",
+    "storage_bucket": "carvia-bdd69.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:394553229867:android:51aa7a015b5ce8438b206e",
+        "android_client_info": {
+          "package_name": "com.example.carvia"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBM4w67r_da0BX4cPi9yBuTGJDaG9t5iFM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
