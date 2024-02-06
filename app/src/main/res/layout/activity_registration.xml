@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Registration">
+    tools:context=".auth.Registration">
 
     <TextView
         android:id="@+id/textView"
@@ -33,7 +33,7 @@
         app:startIconDrawable="@drawable/ic_person">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/full_name_input2"
+            android:id="@+id/full_name_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textCapWords"></com.google.android.material.textfield.TextInputEditText>
@@ -93,6 +93,7 @@
         android:layout_marginTop="20dp"
         android:hint="Пароль"
         app:endIconMode="password_toggle"
+
         app:helperTextTextColor="#FF0000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -117,6 +118,7 @@
         app:helperTextTextColor="#FF0000"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="20dp"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password_input_layout"
         app:startIconDrawable="@drawable/ic_lock">
@@ -133,7 +135,7 @@
         android:id="@+id/complete_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Готово"
+        android:text="Зарегистрироваться"
         android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
