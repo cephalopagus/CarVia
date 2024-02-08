@@ -96,18 +96,12 @@ class Registration : AppCompatActivity() {
                                 val intent= Intent(this,MainActivity::class.java)
                                 startActivity(intent)
                             }else{
-                                Toast.makeText(
-                                    this,
-                                    "Что то пошло не так ,попробуйте снова",
-                                    Toast.LENGTH_LONG
-                                ).show()
+                                Toast.makeText(this,"Что то пошло не так ,попробуйте снова", Toast.LENGTH_LONG).show()
                             }
                         }
                     }
                 }
             }
-
         }
-
     }
 }

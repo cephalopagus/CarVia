@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.WindowManager
 import android.widget.Button
 import androidx.appcompat.app.AppCompatDelegate
+import com.example.carvia.auth.Authorization
 import com.example.carvia.auth.Registration
 
 class WelcomeScreen : AppCompatActivity() {
@@ -16,9 +17,13 @@ class WelcomeScreen : AppCompatActivity() {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         supportActionBar?.hide()
 
-        val button = findViewById<Button>(R.id.registation_btn)
-        button.setOnClickListener {
+        val buttonRgs = findViewById<Button>(R.id.registation_btn)
+        buttonRgs.setOnClickListener {
             startActivity(Intent(this, Registration::class.java))
+        }
+        val buttonAtr = findViewById<Button>(R.id.authorization_btn)
+        buttonAtr.setOnClickListener {
+            startActivity(Intent(this, Authorization::class.java))
         }
 
     }

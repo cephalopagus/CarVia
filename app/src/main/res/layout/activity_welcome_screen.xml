@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent"></Button>
 
     <Button
-        android:id="@+id/login_btn"
+        android:id="@+id/authorization_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Авторизация"
