@@ -13,6 +13,9 @@
         android:theme="@style/Theme.CarVia"
         tools:targetApi="31">
         <activity
+            android:name=".CreatingInsurance"
+            android:exported="false" />
+        <activity
             android:name=".auth.Authorization"
             android:exported="false" />
         <activity
@@ -31,7 +34,8 @@
         <activity
             android:name=".MainActivity"
             android:exported="false"
-            android:label="@string/app_name" />
+            android:label="@string/app_name">
+        </activity>
     </application>
 
 </manifest>
