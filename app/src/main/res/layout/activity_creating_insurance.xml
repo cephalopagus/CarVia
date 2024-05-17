@@ -4,15 +4,281 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreatingInsurance">
+    android:orientation="vertical"
+    tools:context=".insurance.CreatingInsuranceOsago">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="always"
+        android:scrollbars="vertical">
+        <LinearLayout
+            android:paddingHorizontal="30dp"
+            android:paddingVertical="30dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_regular"
+                android:text="Оформление ОСАГО"
+                android:textSize="30dp">
+            </TextView>
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_bold"
+                android:text="Выберите тип автомобиля:"
+                android:textSize="20dp">
+            </TextView>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Авто и мощность"
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusBottomEnd="10dp"
+                android:layout_marginTop="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+                <AutoCompleteTextView
+                    android:id="@+id/dropdown_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </AutoCompleteTextView>
+            </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="fkjesbgksnlvs"
-        android:textSize="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></TextView>
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_bold"
+                android:text="Автомобиль зерегистрирован в иностранном государстве:"
+                android:textSize="20dp">
+            </TextView>
+            <RadioGroup
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:outlineAmbientShadowColor="@color/background">
+                <RadioButton
+                    android:id="@+id/osago_sec_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Да"
+                    android:textColor="#757575"
+                    android:textSize="17dp"
+                    android:fontFamily="@font/ubuntu_regular">
+                </RadioButton>
+                <RadioButton
+                    android:id="@+id/osago_sec_no"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Нет"
+                    android:textSize="17dp"
+
+                    android:textColor="#757575"
+                    android:fontFamily="@font/ubuntu_regular">
+                </RadioButton>
+            </RadioGroup>
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_bold"
+                android:text="Укажите минимальный возраст водителя и стаж:"
+                android:textSize="20dp">
+            </TextView>
+            <RadioGroup
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:outlineAmbientShadowColor="@color/background">
+                <RadioButton
+                    android:id="@+id/osago_third_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="До 25 лет, стаж до 3х лет"
+                    android:textColor="#757575"
+                    android:textSize="17dp"
+                    android:fontFamily="@font/ubuntu_regular">
+                </RadioButton>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="До 25 лет, стаж от 3х лет"
+                    android:textSize="17dp"
+                    android:textColor="#757575"
+                    android:fontFamily="@font/ubuntu_regular">
+                </RadioButton>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="От 25 лет, стаж от 3х лет"
+                    android:textSize="17dp"
+                    android:textColor="#757575"
+                    android:fontFamily="@font/ubuntu_regular">
+                </RadioButton>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="От 25 лет, стаж от 3х лет"
+                    android:textSize="17dp"
+                    android:textColor="#757575"
+                    android:fontFamily="@font/ubuntu_regular">
+                </RadioButton>
+                <RadioButton
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Без ограничения по количеству водителей/юридические лица"
+                    android:textSize="17dp"
+                    android:textColor="#757575"
+                    android:fontFamily="@font/ubuntu_regular">
+                </RadioButton>
+            </RadioGroup>
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_bold"
+                android:text="Укажите срок страхования:"
+                android:textSize="20dp">
+            </TextView>
+            <RadioGroup
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:outlineAmbientShadowColor="@color/background">
+                <RadioButton
+                    android:id="@+id/osago_forth_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="От 5 до 15 дней"
+                    android:textColor="#757575"
+                    android:textSize="17dp"
+                    android:fontFamily="@font/ubuntu_regular">
+                </RadioButton>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="От 16 дней до 1 месяца"
+                    android:textSize="17dp"
+                    android:textColor="#757575"
+                    android:fontFamily="@font/ubuntu_regular">
+                </RadioButton>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="До 3 месяцев"
+                    android:textSize="17dp"
+                    android:textColor="#757575"
+                    android:fontFamily="@font/ubuntu_regular">
+                </RadioButton>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="До 6 месяцев"
+                    android:textSize="17dp"
+                    android:textColor="#757575"
+                    android:fontFamily="@font/ubuntu_regular">
+                </RadioButton>
+                <RadioButton
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="До 9 месяцев"
+                    android:textSize="17dp"
+                    android:textColor="#757575"
+                    android:fontFamily="@font/ubuntu_regular">
+                </RadioButton>
+                <RadioButton
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="До 12 месяцев"
+                    android:textSize="17dp"
+                    android:textColor="#757575"
+                    android:fontFamily="@font/ubuntu_regular">
+                </RadioButton>
+            </RadioGroup>
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="20dp"
+                android:orientation="vertical"
+                android:background="@color/background">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="20dp"
+                    android:text="Стоимость полиса:"
+                    android:textSize="20dp">
+                </TextView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ubuntu_bold"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="20dp"
+                        android:text="2900"
+                        android:textSize="23dp">
+                    </TextView>
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ubuntu_bold"
+                        android:textColor="@color/white"
+                        android:text="СОМ"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="23dp">
+                    </TextView>
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/ubuntu_regular"
+                android:padding="10dp"
+                android:text="ОФОРМИТЬ"
+                android:textSize="20dp"
+                app:cornerRadius="10dp"
+                android:layout_gravity="end"
+                app:strokeColor="@color/background"
+                app:strokeWidth="2dp"
+                android:layout_marginBottom="25dp"
+                android:textColor="@color/background"
+                android:backgroundTint="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/password_input_layout_auth" />
+
+
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
