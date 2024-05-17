@@ -21,12 +21,12 @@ class CreatingInsuranseKasko : AppCompatActivity() {
         slider.setOnSeekBarChangeListener(object :OnSeekBarChangeListener{
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 if (progress<33){
-                    kasko_proc.text = "1%"
+                    kasko_proc.text = "1"
                 }else if (progress in 34..65){
-                    kasko_proc.text = "2%"
+                    kasko_proc.text = "2"
                 }
                 else{
-                    kasko_proc.text = "3%"
+                    kasko_proc.text = "3"
                 }
             }
 
