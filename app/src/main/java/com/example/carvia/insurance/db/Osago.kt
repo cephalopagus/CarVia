@@ -7,7 +7,9 @@ data class Osago(
     var name:String?=null,
     var phone: String? =null,
     var type_auto:String?=null,
+    var diagnostic_card:String?=null,
     var foreign_auto: String? =null,
     var experience: String? =null,
     var period: String? =null,
+    val date_order: String?=null,
     var price: Float? =null )

@@ -118,7 +118,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/ubuntu_bold"
-                android:text="Автомобиль зерегистрирован в иностранном государстве:"
+                android:text="Автомобиль зарегистрирован в иностранном государстве:"
                 android:textSize="20dp">
             </TextView>
             <RadioGroup
@@ -139,6 +139,42 @@
                 </RadioButton>
                 <RadioButton
                     android:id="@+id/osago_2"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Нет"
+                    android:textSize="17dp"
+
+                    android:textColor="#757575"
+                    android:fontFamily="@font/ubuntu_regular">
+                </RadioButton>
+            </RadioGroup>
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_bold"
+                android:text="Диагностическая карта:"
+                android:textSize="20dp">
+            </TextView>
+            <RadioGroup
+                android:id="@+id/diagnostic_card_osago"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:outlineAmbientShadowColor="@color/background">
+                <RadioButton
+                    android:id="@+id/diagnostic_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Имеется"
+                    android:textColor="#757575"
+                    android:textSize="17dp"
+                    android:fontFamily="@font/ubuntu_regular">
+                </RadioButton>
+                <RadioButton
+                    android:id="@+id/diagnostic_2"
                     android:layout_marginLeft="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -324,7 +360,7 @@
 
             </LinearLayout>
             <LinearLayout
-android:layout_marginTop="15dp"
+                android:layout_marginTop="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <com.google.android.material.button.MaterialButton

@@ -1,6 +1,7 @@
 package com.example.carvia.insurance
 
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
@@ -10,6 +11,7 @@ import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.TextView
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatDelegate
 import com.example.carvia.MainActivity
 import com.example.carvia.R
@@ -18,11 +20,16 @@ import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
+import com.razorpay.Checkout
+import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.util.Date
 
 class CreatingInsuranceOsago : AppCompatActivity() {
 
     private lateinit var database: FirebaseDatabase
     private lateinit var auth: FirebaseAuth
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_creating_insurance)
@@ -62,6 +69,7 @@ class CreatingInsuranceOsago : AppCompatActivity() {
         val phone_to_db:TextInputEditText = findViewById(R.id.phone_osago)
 
         val type_auto_to_db:AutoCompleteTextView = findViewById(R.id.auto_type_osago)
+        val diagnostic_card_to_bd:RadioGroup = findViewById(R.id.diagnostic_card_osago)
         val foreign_auto_to_db:RadioGroup = findViewById(R.id.foreign_auto_osago)
         val experience_to_db:RadioGroup = findViewById(R.id.experience_osago)
         val period_to_db:RadioGroup = findViewById(R.id.period_osago)
@@ -76,6 +84,20 @@ class CreatingInsuranceOsago : AppCompatActivity() {
 
         database = FirebaseDatabase.getInstance()
         auth = FirebaseAuth.getInstance()
+
+        database.reference.child("users").child(auth.currentUser!!.uid).get().addOnSuccessListener {
+            if (it.exists()){
+                val set_name = findViewById<TextView>(R.id.name_osago)
+                val name = it.child("name").value.toString()
+
+
+                val set_phone = findViewById<TextView>(R.id.phone_osago)
+                val phone = it.child("phone").value.toString()
+                set_name.setText(name)
+                set_phone.setText(phone)
+
+            }
+        }
 
 
         btn_cal_osago.setOnClickListener {
@@ -97,17 +119,25 @@ class CreatingInsuranceOsago : AppCompatActivity() {
 
             val index_per = perAuto.indexOf(period_rb.text.toString())
             price+=coefficient*((index_per+1.6f)/2)
+            if (findViewById<RadioButton>(diagnostic_card_to_bd.checkedRadioButtonId).text.toString() == "Имеется"){
+                price-=400
+            }else{
+                price=price
+            }
 
             price_osago.setText(price.toString())
 
 
+
         }
+
 
         btn_osago.setOnClickListener {
 
             val foreign_auto_rb:RadioButton = findViewById(foreign_auto_to_db.checkedRadioButtonId)
             val experience_rb:RadioButton = findViewById(experience_to_db.checkedRadioButtonId)
             val period_rb:RadioButton = findViewById(period_to_db.checkedRadioButtonId)
+            val diagnostic_rb:RadioButton = findViewById(diagnostic_card_to_bd.checkedRadioButtonId)
 
             val name = name_to_db.text
             val phone = phone_to_db.text
@@ -115,13 +145,15 @@ class CreatingInsuranceOsago : AppCompatActivity() {
             val foreign = foreign_auto_rb.text
             val exp = experience_rb.text
             val period = period_rb.text
+            val diagnostic = diagnostic_rb.text
             val price_total  = (price_osago.text as String).toFloatOrNull()
+            val currentDate = LocalDate.now()
 
 
             val db_id = database.reference.push().key!!
             val database= database.reference.child("osago").child(db_id)
-            val osago = Osago(auth.currentUser!!.uid, name.toString(), phone.toString(), type.toString(), foreign.toString(),
-                exp.toString(), period.toString(), price_total)
+            val osago = Osago(auth.currentUser!!.uid, name.toString(), phone.toString(), type.toString(),diagnostic.toString(), foreign.toString(),
+                exp.toString(), period.toString(),currentDate.toString(), price_total)
             database.setValue(osago).addOnCompleteListener{
                 Toast.makeText(this,"Документ оформлен!", Toast.LENGTH_LONG).show()
                 val intent= Intent(this,MainActivity::class.java)

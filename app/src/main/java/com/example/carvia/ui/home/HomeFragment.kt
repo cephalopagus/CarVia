@@ -16,6 +16,7 @@ import com.example.carvia.insurance.CreatingInsuranseKasko
 import com.example.carvia.R
 import com.example.carvia.databinding.FragmentHomeBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 
 class HomeFragment : Fragment() {
 
@@ -53,14 +54,31 @@ class HomeFragment : Fragment() {
         btn_property.setOnClickListener {
             startActivity(Intent(requireContext(), CreatingInsuranceProperty::class.java))
         }
-        val user = FirebaseAuth.getInstance().currentUser
-        if (user != null) {
-            val userEmail = user.email
-            val set_name = view.findViewById<TextView>(R.id.username_homepage)
-            set_name.text = userEmail
-        } else {
-            // No user is signed in
+        val auth = FirebaseAuth.getInstance().currentUser
+        var database = FirebaseDatabase.getInstance().reference.child("users").child(auth!!.uid)
+        database.get().addOnSuccessListener {
+            if (it.exists()){
+                val set_name = view.findViewById<TextView>(R.id.username_homepage)
+                val name = it.child("name").value.toString()
+                val name_ms = name.split(" ")
+                if (name_ms[1].equals("уулу") || name_ms[1].equals("кызы")){
+
+                    set_name.append(name_ms[2]+"!")
+                }
+                else{
+                    set_name.append(name_ms[1]+"!")
+                }
+
+            }
         }
+
+//        if (auth != null) {
+//            val userEmail = auth.email
+//            val set_name = view.findViewById<TextView>(R.id.username_homepage)
+//            set_name.text = userEmail
+//        } else {
+//            // No user is signed in
+//        }
 
     }
     override fun onDestroyView() {

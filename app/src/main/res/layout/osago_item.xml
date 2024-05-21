@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="20dp"
+    android:layout_marginHorizontal="30dp"
+    android:layout_marginVertical="20dp">
+    <LinearLayout
+        android:padding="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_bold"
+                android:text="ЭЛЕКТРОННЫЙ СТРАХОВОЙ ПОЛИС"
+                android:textSize="20dp">
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/ubuntu_regular"
+                android:textSize="20dp"
+                android:textAlignment="textEnd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Срок страхования:">
+            </TextView>
+            <LinearLayout
+                android:gravity="end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:textSize="18dp"
+                    android:textAlignment="textEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="C  ">
+                </TextView>
+                <TextView
+                    android:id="@+id/insurance_date_start_osago"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:textSize="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1/11/1111">
+                </TextView>
+                <TextView
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:textSize="18dp"
+                    android:textAlignment="textEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  ПО  ">
+                </TextView>
+                <TextView
+                    android:id="@+id/insurance_date_end_osago"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:textSize="18dp"
+                    android:gravity="end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1/11/1111">
+                </TextView>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:fontFamily="@font/ubuntu_regular"
+                android:textSize="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Страхователь (полное наименование гражданина):">
+            </TextView>
+            <TextView
+                android:id="@+id/insurance_name_osago"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:textSize="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Бакаев Дастан Жолдошбекович">
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:fontFamily="@font/ubuntu_regular"
+                android:textSize="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Вид транспортного средства:">
+            </TextView>
+            <TextView
+                android:id="@+id/insurance_type_osago"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:textSize="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Легковое авто - до 2.0 л">
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:fontFamily="@font/ubuntu_regular"
+                android:textSize="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Транспортное средство зарегистрировано в
+                иностранном государстве:">
+            </TextView>
+            <TextView
+                android:id="@+id/insurance_foreign_osago"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:textSize="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Да">
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:fontFamily="@font/ubuntu_regular"
+                android:textSize="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Диагностическая карта:">
+            </TextView>
+            <TextView
+                android:id="@+id/insurance_diagnostic_osago"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:textSize="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Имеется">
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:fontFamily="@font/ubuntu_regular"
+                android:textSize="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Возраст и стаж водителя:">
+            </TextView>
+            <TextView
+                android:id="@+id/insurance_exp_osago"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:textSize="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="От 25 лет, стаж до 3х лет">
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:fontFamily="@font/ubuntu_regular"
+                android:textSize="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Срок страхования:">
+            </TextView>
+            <TextView
+                android:id="@+id/insurance_period_osago"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:textSize="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="От 5 до 15 дней">
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:gravity="end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:textSize="20dp"
+                    android:textAlignment="textEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Цена договора:  ">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/insurance_price_osago"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:textSize="18dp"
+                    android:textAlignment="textEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1000">
+                </TextView>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/ubuntu_regular"
+                android:textSize="20dp"
+                android:textAlignment="textEnd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Дата заключения договора:">
+            </TextView>
+            <LinearLayout
+                android:gravity="end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/insurance_date_osago"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:textSize="18dp"
+                    android:textAlignment="textEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0/00/0000">
+                </TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

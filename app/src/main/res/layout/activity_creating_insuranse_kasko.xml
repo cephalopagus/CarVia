@@ -49,7 +49,7 @@
                 app:startIconDrawable="@drawable/ic_person">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/full_name_input"
+                    android:id="@+id/name_kasko"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textCapWords"></com.google.android.material.textfield.TextInputEditText>
@@ -79,7 +79,7 @@
                 app:startIconDrawable="@drawable/ic_phone">
 
                 <com.santalu.maskara.widget.MaskEditText
-                    android:id="@+id/phone_num_input"
+                    android:id="@+id/phone_kasko"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="phone"
@@ -112,7 +112,7 @@
                 app:startIconDrawable="@drawable/baseline_directions_car_24">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/full_name_inputау"
+                    android:id="@+id/model_auto_kasko"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textCapWords"></com.google.android.material.textfield.TextInputEditText>
@@ -140,7 +140,7 @@
                 app:startIconDrawable="@drawable/baseline_calendar_month_24">
 
                 <com.santalu.maskara.widget.MaskEditText
-                    android:id="@+id/phone_num_inpuegt"
+                    android:id="@+id/year_auto_kasko"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="date"
@@ -153,7 +153,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/ubuntu_bold"
-                android:text="Стоимость ТС в $:"
+                android:text="Стоимость ТС (сом):"
                 android:textSize="20dp">
             </TextView>
             <com.google.android.material.textfield.TextInputLayout
@@ -171,7 +171,7 @@
                 app:startIconDrawable="@drawable/baseline_attach_money_24">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/full_naefesfme_input"
+                    android:id="@+id/price_auto_kasko"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="numberDecimal"></com.google.android.material.textfield.TextInputEditText>
@@ -205,7 +205,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/ubuntu_bold"
-                    android:text="1"
+                    android:text="0"
                     android:textSize="17dp">
                 </TextView>
                 <TextView
@@ -243,13 +243,14 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <TextView
+                        android:id="@+id/price_kasko"
                         android:layout_marginTop="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/ubuntu_bold"
                         android:textColor="@color/white"
                         android:layout_marginLeft="20dp"
-                        android:text="2900"
+                        android:text="0"
                         android:textSize="23dp">
                     </TextView>
                     <TextView
@@ -266,25 +267,42 @@
 
 
             </LinearLayout>
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <LinearLayout
                 android:layout_marginTop="15dp"
-                android:fontFamily="@font/ubuntu_regular"
-                android:padding="10dp"
-                android:text="ОФОРМИТЬ"
-                android:textSize="20dp"
-                app:cornerRadius="10dp"
-                android:layout_gravity="end"
-                app:strokeColor="@color/background"
-                app:strokeWidth="2dp"
-                android:layout_marginBottom="25dp"
-                android:textColor="@color/background"
-                android:backgroundTint="@color/white"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/password_input_layout_auth" />
-
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_calculate_kasko"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:padding="10dp"
+                    android:layout_marginRight="50dp"
+                    android:text="ПОСЧИТАТЬ"
+                    android:textSize="20dp"
+                    app:cornerRadius="10dp"
+                    android:layout_gravity="end"
+                    app:strokeColor="@color/background"
+                    app:strokeWidth="2dp"
+                    android:layout_marginBottom="25dp"
+                    android:textColor="@color/background"
+                    android:backgroundTint="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_create_kasko"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:padding="10dp"
+                    android:text="ОФОРМИТЬ"
+                    android:textSize="20dp"
+                    app:cornerRadius="10dp"
+                    android:layout_marginBottom="25dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </LinearLayout>
 
 
 
