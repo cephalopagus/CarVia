@@ -30,6 +30,11 @@ class OsagoAdapter(private val osagoList: ArrayList<Osago>): RecyclerView.Adapte
         val currentItem = osagoList[position]
         holder.name.text = currentItem.name
         holder.type.text = currentItem.type_auto
+
+
+
+
+
         holder.foreign.text = currentItem.foreign_auto
         holder.diagnostic.text = currentItem.diagnostic_card
         holder.exp.text = currentItem.experience
@@ -55,10 +60,13 @@ class OsagoAdapter(private val osagoList: ArrayList<Osago>): RecyclerView.Adapte
 
     }
     class myViewHolder(itemView:View):RecyclerView.ViewHolder(itemView){
-
         val name:TextView = itemView.findViewById(R.id.insurance_name_osago)
         val type:TextView = itemView.findViewById(R.id.insurance_type_osago)
         val foreign:TextView = itemView.findViewById(R.id.insurance_foreign_osago)
+
+
+
+
         val diagnostic:TextView = itemView.findViewById(R.id.insurance_diagnostic_osago)
         val exp:TextView = itemView.findViewById(R.id.insurance_exp_osago)
         val date:TextView = itemView.findViewById(R.id.insurance_date_osago)

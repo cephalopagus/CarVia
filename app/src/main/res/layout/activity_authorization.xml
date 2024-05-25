@@ -4,78 +4,140 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".auth.Authorization">
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Авторизация"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:textColor="@color/black"
-        android:layout_marginTop="50dp"
-        android:textSize="20dp"></TextView>
+    tools:context=".admin.Authorization"
+    android:background="#F7F7F7">
 
-
-
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/email_input_layout_auth"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="40dp"
-        android:layout_marginTop="20dp"
-        android:hint="Электронная почта"
+        android:layout_marginHorizontal="30dp"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:startIconDrawable="@drawable/ic_email">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/email_input_auth"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"></com.google.android.material.textfield.TextInputEditText>
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_bold"
+                android:text="Вход"
+                android:textAlignment="center"
+                android:textColor="#3F60B4"
+                android:textSize="30dp"></TextView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/email_input_layout_auth"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColorHint="#3F60B4"
+                app:boxStrokeColor="#3F60B4"
+                app:cursorColor="#3F60B4"
+                android:outlineAmbientShadowColor="#3F60B4"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:startIconDrawable="@drawable/ic_email">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/login_admin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"></com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password_input_layout_auth"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:endIconMode="password_toggle"
+                app:helperTextTextColor="#FF0000"
+                android:textColorHint="#3F60B4"
+                app:boxStrokeColor="#3F60B4"
+                app:cursorColor="#3F60B4"
+                android:outlineAmbientShadowColor="#3F60B4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/email_input_layout_auth"
+                app:startIconDrawable="@drawable/ic_lock">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password_admin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"></com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
 
 
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/password_input_layout_auth"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="40dp"
-        android:layout_marginTop="20dp"
-        android:hint="Пароль"
-        app:endIconMode="password_toggle"
+                <LinearLayout
+                    android:layout_gravity="end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
 
-        app:helperTextTextColor="#FF0000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_input_layout_auth"
-        app:startIconDrawable="@drawable/ic_lock">
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/complete_btn_auth_admin"
+                        android:layout_marginLeft="200dp"
+                        android:backgroundTint="#3F60B4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ubuntu_regular"
+                        android:padding="10dp"
+                        android:text="ВОЙТИ"
+                        android:textSize="20dp"
+                        app:cornerRadius="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/password_input_layout_auth" />
+                </LinearLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/password_input_auth"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"></com.google.android.material.textfield.TextInputEditText>
-    </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
 
 
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/complete_btn_auth"
+        android:id="@+id/btn_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Авторизироваться"
-        android:layout_marginTop="40dp"
+        android:fontFamily="@font/ubuntu_regular"
+        android:padding="10dp"
+        android:text="Пользовательская панель"
+        android:textSize="20dp"
+        app:cornerRadius="10dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_input_layout_auth" />
+        app:layout_constraintStart_toStartOf="parent" />
+
+
 
 
 

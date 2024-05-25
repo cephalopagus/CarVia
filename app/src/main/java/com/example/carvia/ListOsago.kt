@@ -54,10 +54,7 @@ class ListOsago : AppCompatActivity() {
                     }
                     osagoRecyclerView.adapter = OsagoAdapter(osagoArrayList)
                 }
-
-
             }
-
             override fun onCancelled(error: DatabaseError) {
                 TODO("Not yet implemented")
             }

@@ -17,8 +17,14 @@ import com.google.firebase.ktx.Firebase
 import com.santalu.maskara.widget.MaskEditText
 
 class Registration : AppCompatActivity() {
+
+
+
     private lateinit var auth:FirebaseAuth
     private lateinit var database:FirebaseDatabase
+
+
+
     private  val emailPattern="[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+"
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,15 +47,12 @@ class Registration : AppCompatActivity() {
         val reg_password:TextInputEditText = findViewById(R.id.password_input)
         val reg_password_rep:TextInputEditText = findViewById(R.id.repeat_password_input)
         val conf_btn:MaterialButton = findViewById(R.id.complete_btn)
-
-
         conf_btn.setOnClickListener {
             val name = reg_name.text.toString()
             val phone = reg_phone_num.text.toString()
             val email = reg_email.text.toString()
             val password = reg_password.text.toString()
             val r_password = reg_password_rep.text.toString()
-
             if(name.isEmpty()||email.isEmpty()||phone.isEmpty()||password.isEmpty()||r_password.isEmpty()){
                 if(name.isEmpty()){
                     reg_name.error="Введите свое имя"

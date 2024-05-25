@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#F7F7F7"
+    tools:context=".SelectedUser">
+    <LinearLayout
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="60dp"
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+
+            android:src="@drawable/user_blue_svgrepo_com"></ImageView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/name_redact"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/ubuntu_regular"
+                android:textSize="30dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Керимов Адис Канатович"
+                android:layout_marginBottom="120dp"></TextView>
+        </LinearLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/edit_profile_btn"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#3F60B4"
+            android:fontFamily="@font/ubuntu_regular"
+            android:padding="10dp"
+            android:text="Редактировать профиль"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:cornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/edit_document_btn"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#3F60B4"
+            android:fontFamily="@font/ubuntu_regular"
+            android:padding="10dp"
+            android:text="редактировать документы"
+            android:textSize="20dp"
+            app:cornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnLogout" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/delete_profile_btn"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:fontFamily="@font/ubuntu_regular"
+            android:padding="10dp"
+            android:text="Удалить аккаунт"
+            android:textSize="20dp"
+            app:cornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnLogout" />
+
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
