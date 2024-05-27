@@ -4,17 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListOsago"
+    tools:context=".DocumentListEdit"
     android:background="#F7F7F7">
 
 
 
     <androidx.recyclerview.widget.RecyclerView
         android:paddingTop="50dp"
-        android:id="@+id/recycler_list_osago"
+        android:id="@+id/recycler_list_osago_edit"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:listitem="@layout/osago_item"
         android:paddingBottom="30dp"/>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

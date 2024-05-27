@@ -44,19 +44,7 @@ class OsagoAdapter(private val osagoList: ArrayList<Osago>): RecyclerView.Adapte
         holder.period.text = currentItem.period
 
 
-        val perMap = mapOf("От 5 до 15 дней" to 15,
-            "От 16 дней до 1 месяца" to 31,
-            "До 3 месяцев" to 91,
-            "До 6 месяцев" to 182,
-            "До 9 месяцев" to 273,
-            "До 12 месяцев" to 365)
-
-        val index = perMap.get((currentItem.period))
-        val calendar =LocalDate.now().plusDays(index!!.toLong())
-
-
-        holder.date_end.text = calendar.toString()
-
+        holder.date_end.text = currentItem.date_order_end
 
     }
     class myViewHolder(itemView:View):RecyclerView.ViewHolder(itemView){

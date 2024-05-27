@@ -138,12 +138,22 @@ class CreatingInsuranceOsago : AppCompatActivity() {
             val price_total  = (price_osago.text as String).toFloatOrNull()
             val currentDate = LocalDate.now()
 
+            val perMap = mapOf("От 5 до 15 дней" to 15,
+                "От 16 дней до 1 месяца" to 31,
+                "До 3 месяцев" to 91,
+                "До 6 месяцев" to 182,
+                "До 9 месяцев" to 273,
+                "До 12 месяцев" to 365)
+
+            val index = perMap.get((period))
+            val end_date = currentDate.plusDays(index!!.toLong())
+
 
             val db_id = database.reference.push().key!!
             val database= database.reference.child("osago").child(db_id)
             val osago = Osago(auth.currentUser!!.uid, name.toString(), phone.toString(),
                 type.toString(),diagnostic.toString(), foreign.toString(),
-                exp.toString(), period.toString(),currentDate.toString(), price_total)
+                exp.toString(), period.toString(),currentDate.toString(), end_date.toString(), price_total, db_id.toString())
             database.setValue(osago).addOnCompleteListener{
                 Toast.makeText(this,"Документ оформлен!", Toast.LENGTH_LONG).show()
                 val intent= Intent(this,MainActivity::class.java)

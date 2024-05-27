@@ -40,7 +40,9 @@ class SelectedUser : AppCompatActivity() {
 
         }
         edit_doc_btn.setOnClickListener {
-
+            startActivity(Intent(this, DocumentEdit::class.java).apply {
+                putExtra("UID", uid)
+            })
         }
         delete_profile_btn.setOnClickListener {
 

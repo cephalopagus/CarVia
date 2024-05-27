@@ -12,7 +12,8 @@ import com.example.carvia.WelcomeScreen
 import com.example.carvia.auth.Users
 import com.google.android.material.button.MaterialButton
 
-class AdminUserAdapter(private var adminUserList:ArrayList<Users>, clickListener: ClickListener):RecyclerView.Adapter<AdminUserAdapter.myViewHolder>()  {
+class AdminUserAdapter(private var adminUserList:ArrayList<Users>, clickListener: ClickListener):
+    RecyclerView.Adapter<AdminUserAdapter.myViewHolder>()  {
 
     private var clickListener: ClickListener = clickListener
     interface ClickListener{

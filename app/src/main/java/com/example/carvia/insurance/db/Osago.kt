@@ -12,4 +12,6 @@ data class Osago(
     var experience: String? =null,
     var period: String? =null,
     val date_order: String?=null,
-    var price: Float? =null )
+    val date_order_end: String?=null,
+    var price: Float? =null,
+    var id: String? =null)

@@ -158,19 +158,4 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_admin_panel"
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:backgroundTint="#3F60B4"
-        android:fontFamily="@font/ubuntu_regular"
-        android:padding="10dp"
-        android:text="Адмиская панель"
-        android:textSize="20dp"
-        app:cornerRadius="10dp"
-        android:layout_marginBottom="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
