@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F7F7F7"
-    tools:context=".list_edit.SelectedDocOsago">
+    tools:context=".list_edit.SelectedDocHealth">
     <androidx.cardview.widget.CardView
         android:layout_marginTop="60dp"
         android:id="@+id/cardView"
@@ -43,7 +43,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editable_name_osago"
+                    android:id="@+id/editable_name_health"
                     android:text="Дастан"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -70,8 +70,34 @@
                 app:layout_constraintTop_toBottomOf="@+id/email_input_layout_auth">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editable_type_osago"
-                    android:text="Лекговое авто"
+                    android:id="@+id/editable_birth_health"
+                    android:text="00.00.0000"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number">
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                android:textColorHint="#3F60B4"
+                app:boxStrokeColor="#3F60B4"
+                app:cursorColor="#3F60B4"
+                android:outlineAmbientShadowColor="#3F60B4"
+                app:boxCornerRadiusTopStart="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/email_input_layout_auth">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editable_pasport_health"
+                    android:text="20192019"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text">
@@ -96,8 +122,84 @@
                 app:layout_constraintTop_toBottomOf="@+id/email_input_layout_auth">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editable_exp_osago"
-                    android:text="Стаж"
+                    android:id="@+id/editable_pasport_date_health"
+                    android:text="00.00.0000"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number">
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                android:textColorHint="#3F60B4"
+                app:boxStrokeColor="#3F60B4"
+                app:cursorColor="#3F60B4"
+                android:outlineAmbientShadowColor="#3F60B4"
+                app:boxCornerRadiusTopStart="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/email_input_layout_auth">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editable_pasport_house_health"
+                    android:text="УФМС"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords">
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                android:textColorHint="#3F60B4"
+                app:boxStrokeColor="#3F60B4"
+                app:cursorColor="#3F60B4"
+                android:outlineAmbientShadowColor="#3F60B4"
+                app:boxCornerRadiusTopStart="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/email_input_layout_auth">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editable_pasport_id_health"
+                    android:text="ИНН"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number">
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                android:textColorHint="#3F60B4"
+                app:boxStrokeColor="#3F60B4"
+                app:cursorColor="#3F60B4"
+                android:outlineAmbientShadowColor="#3F60B4"
+                app:boxCornerRadiusTopStart="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/email_input_layout_auth">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editable_address_health"
+                    android:text="Бишкек"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text">
@@ -122,33 +224,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/email_input_layout_auth">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editable_period_osago"
-                    android:text="Срок"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text">
-                </com.google.android.material.textfield.TextInputEditText>
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                app:boxCornerRadiusBottomEnd="10dp"
-                app:boxCornerRadiusBottomStart="10dp"
-                app:boxCornerRadiusTopEnd="10dp"
-                android:textColorHint="#3F60B4"
-                app:boxStrokeColor="#3F60B4"
-                app:cursorColor="#3F60B4"
-                android:outlineAmbientShadowColor="#3F60B4"
-                app:boxCornerRadiusTopStart="10dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/email_input_layout_auth">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editable_price_osago"
+                    android:id="@+id/editable_price_health"
                     android:text="500.5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -173,7 +249,7 @@
                     android:layout_height="wrap_content">
 
                     <com.google.android.material.button.MaterialButton
-                        android:id="@+id/complete_btn_doc_edit"
+                        android:id="@+id/complete_btn_doc_edit_health"
                         android:layout_width="match_parent"
                         android:backgroundTint="#3F60B4"
                         android:layout_height="match_parent"

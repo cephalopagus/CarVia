@@ -1,4 +1,4 @@
-package com.example.carvia
+package com.example.carvia.list_edit
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,16 +7,14 @@ import android.view.WindowManager
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
-import com.example.carvia.adapter.OsagoAdapter
+import com.example.carvia.AdminPanel
+import com.example.carvia.R
 import com.example.carvia.insurance.db.Osago
 import com.google.android.material.button.MaterialButton
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
 
-class SelectedDoc : AppCompatActivity() {
+class SelectedDocOsago : AppCompatActivity() {
     private lateinit var database: FirebaseDatabase
     private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {

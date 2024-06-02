@@ -1,6 +1,7 @@
 package com.example.carvia.insurance
 
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
@@ -10,6 +11,7 @@ import android.widget.SeekBar
 import android.widget.SeekBar.OnSeekBarChangeListener
 import android.widget.TextView
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatDelegate
 import com.example.carvia.MainActivity
 import com.example.carvia.R
@@ -20,11 +22,13 @@ import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import java.text.SimpleDateFormat
+import java.time.LocalDate
 import java.util.Date
 
 class CreatingInsuranseKasko : AppCompatActivity() {
     private lateinit var database: FirebaseDatabase
     private lateinit var auth: FirebaseAuth
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_creating_insuranse_kasko)
@@ -113,15 +117,14 @@ class CreatingInsuranseKasko : AppCompatActivity() {
             val price_a =price_auto_to_db.text.toString().toInt()
             val procent = procent_kasko.text.toString().toInt()
             val price_total  = (price_kasko.text as String).toFloatOrNull()
-            val date = SimpleDateFormat("dd/M/yyyy")
-            val currentDate = date.format(Date())
-
+            val currentDate = LocalDate.now()
+            val end_date = currentDate.plusDays(365)
 
             val db_id = database.reference.push().key!!
             val database= database.reference.child("kasko").child(db_id)
 
             val kasko = Kasko(auth.currentUser!!.uid, name, phone, model, year,
-                price_a, procent,currentDate.toString(), price_total)
+                price_a, procent,currentDate.toString(), end_date.toString(), price_total, db_id)
             database.setValue(kasko).addOnCompleteListener{
                 Toast.makeText(this,"Документ оформлен!", Toast.LENGTH_LONG).show()
                 val intent= Intent(this, MainActivity::class.java)

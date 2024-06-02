@@ -49,7 +49,7 @@
                 app:startIconDrawable="@drawable/ic_person">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/full_name_input"
+                    android:id="@+id/name_health"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textCapWords"></com.google.android.material.textfield.TextInputEditText>
@@ -79,10 +79,10 @@
                 app:startIconDrawable="@drawable/baseline_calendar_month_24">
 
                 <com.santalu.maskara.widget.MaskEditText
-                    android:id="@+id/phone_num_inpuegt"
+                    android:id="@+id/birth_health"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="date"
+                    android:inputType="number"
                     app:mask="__.__.____"
                     app:maskStyle="persistent">
                 </com.santalu.maskara.widget.MaskEditText>
@@ -112,7 +112,7 @@
                 app:startIconDrawable="@drawable/ic_phone">
 
                 <com.santalu.maskara.widget.MaskEditText
-                    android:id="@+id/phone_num_input"
+                    android:id="@+id/phone_health"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="phone"
@@ -146,7 +146,7 @@
                 app:startIconDrawable="@drawable/ic_email">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/efsfefesf"
+                    android:id="@+id/email_health"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"></com.google.android.material.textfield.TextInputEditText>
@@ -176,7 +176,7 @@
                 app:startIconDrawable="@drawable/baseline_article_24">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/efsfesf"
+                    android:id="@+id/pasport_health"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textCapCharacters"></com.google.android.material.textfield.TextInputEditText>
@@ -206,10 +206,10 @@
                 app:startIconDrawable="@drawable/baseline_calendar_month_24">
 
                 <com.santalu.maskara.widget.MaskEditText
-                    android:id="@+id/phone_num_inegt"
+                    android:id="@+id/pasport_date_health"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="date"
+                    android:inputType="number"
                     app:mask="__.__.____"
                     app:maskStyle="persistent">
                 </com.santalu.maskara.widget.MaskEditText>
@@ -241,10 +241,10 @@
                 app:startIconDrawable="@drawable/baseline_home_work_24">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/full_name_fesinput"
+                    android:id="@+id/pasport_house_health"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textCapWords"></com.google.android.material.textfield.TextInputEditText>
+                    android:inputType="textCapSentences"></com.google.android.material.textfield.TextInputEditText>
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
@@ -272,7 +272,7 @@
             app:startIconDrawable="@drawable/baseline_article_24">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/full_name_fesinefput"
+                android:id="@+id/pasport_id_health"
                 android:layout_width="match_parent"
                 android:maxLength="12"
                 android:layout_height="wrap_content"
@@ -307,7 +307,7 @@
                 app:startIconDrawable="@drawable/ic_home_black_24dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/full_name_fesfsdsinefput"
+                    android:id="@+id/address_health"
                     android:layout_width="match_parent"
                     android:maxLength="12"
                     android:layout_height="wrap_content"
@@ -378,13 +378,14 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <TextView
+                        android:id="@+id/price_health"
                         android:layout_marginTop="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/ubuntu_bold"
                         android:textColor="@color/white"
                         android:layout_marginLeft="20dp"
-                        android:text="2900"
+                        android:text="0"
                         android:textSize="23dp">
                     </TextView>
                     <TextView
@@ -401,24 +402,42 @@
 
 
             </LinearLayout>
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <LinearLayout
                 android:layout_marginTop="15dp"
-                android:fontFamily="@font/ubuntu_regular"
-                android:padding="10dp"
-                android:text="ОФОРМИТЬ"
-                android:textSize="20dp"
-                app:cornerRadius="10dp"
-                android:layout_gravity="end"
-                app:strokeColor="@color/background"
-                app:strokeWidth="2dp"
-                android:layout_marginBottom="25dp"
-                android:textColor="@color/background"
-                android:backgroundTint="@color/white"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/password_input_layout_auth" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_calculate_health"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:padding="10dp"
+                    android:layout_marginRight="50dp"
+                    android:text="ПОСЧИТАТЬ"
+                    android:textSize="20dp"
+                    app:cornerRadius="10dp"
+                    android:layout_gravity="end"
+                    app:strokeColor="@color/background"
+                    app:strokeWidth="2dp"
+                    android:layout_marginBottom="25dp"
+                    android:textColor="@color/background"
+                    android:backgroundTint="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_create_health"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:padding="10dp"
+                    android:text="ОФОРМИТЬ"
+                    android:textSize="20dp"
+                    app:cornerRadius="10dp"
+                    android:layout_marginBottom="25dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </LinearLayout>
         </LinearLayout>
 
 

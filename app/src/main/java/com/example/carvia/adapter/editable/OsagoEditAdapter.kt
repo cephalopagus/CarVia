@@ -1,11 +1,10 @@
-package com.example.carvia.adapter
+package com.example.carvia.adapter.editable
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.carvia.DocumentListEdit
 import com.example.carvia.R
 import com.example.carvia.insurance.db.Osago
 
@@ -34,7 +33,7 @@ class OsagoEdit(private var osagoListEdit:ArrayList<Osago>, clickListener: Click
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): myViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.osago_item, parent, false)
-        return OsagoEdit.myViewHolder(itemView)
+        return myViewHolder(itemView)
     }
 
     override fun getItemCount(): Int {

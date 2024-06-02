@@ -199,6 +199,27 @@
 
         </GridLayout>
 
+        <com.google.android.material.button.MaterialButton
+            app:icon="@drawable/ic_phone"
+            app:iconTint="@android:color/holo_red_light"
+            android:id="@+id/call_im"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/ubuntu_bold"
+            android:padding="10dp"
+            android:text="страховой случай"
+            android:textSize="20dp"
+            app:cornerRadius="10dp"
+            android:layout_gravity="center"
+            app:strokeColor="@android:color/holo_red_light"
+            app:strokeWidth="2dp"
+            android:layout_marginBottom="25dp"
+            android:textColor="@android:color/holo_red_light"
+            android:backgroundTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
 
     </LinearLayout>
 

@@ -1,6 +1,7 @@
 package com.example.carvia.ui.home
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -15,6 +16,7 @@ import com.example.carvia.insurance.CreatingInsuranceProperty
 import com.example.carvia.insurance.CreatingInsuranseKasko
 import com.example.carvia.R
 import com.example.carvia.databinding.FragmentHomeBinding
+import com.google.android.material.button.MaterialButton
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 
@@ -70,6 +72,13 @@ class HomeFragment : Fragment() {
                 }
 
             }
+        }
+
+        val btn_call = view.findViewById<MaterialButton>(R.id.call_im)
+        btn_call.setOnClickListener {
+            val call = Intent(Intent.ACTION_DIAL)
+            call.data = Uri.parse("tel:+996773428201")
+            startActivity(call)
         }
 
 //        if (auth != null) {

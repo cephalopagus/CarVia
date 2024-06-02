@@ -32,7 +32,6 @@ class AdminPanel : AppCompatActivity(), AdminUserAdapter.ClickListener {
     private lateinit var dbref: DatabaseReference
     private lateinit var userRecyclerView: RecyclerView
     private lateinit var userArrayList: ArrayList<Users>
-    private lateinit var adapter:AdminUserAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_admin_panel)

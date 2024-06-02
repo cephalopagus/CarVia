@@ -153,7 +153,7 @@ class CreatingInsuranceOsago : AppCompatActivity() {
             val database= database.reference.child("osago").child(db_id)
             val osago = Osago(auth.currentUser!!.uid, name.toString(), phone.toString(),
                 type.toString(),diagnostic.toString(), foreign.toString(),
-                exp.toString(), period.toString(),currentDate.toString(), end_date.toString(), price_total, db_id.toString())
+                exp.toString(), period.toString(),currentDate.toString(), end_date.toString(), price_total, db_id)
             database.setValue(osago).addOnCompleteListener{
                 Toast.makeText(this,"Документ оформлен!", Toast.LENGTH_LONG).show()
                 val intent= Intent(this,MainActivity::class.java)

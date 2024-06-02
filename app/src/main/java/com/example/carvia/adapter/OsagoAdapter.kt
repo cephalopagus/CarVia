@@ -31,19 +31,13 @@ class OsagoAdapter(private val osagoList: ArrayList<Osago>): RecyclerView.Adapte
         holder.name.text = currentItem.name
         holder.type.text = currentItem.type_auto
 
-
-
-
-
         holder.foreign.text = currentItem.foreign_auto
         holder.diagnostic.text = currentItem.diagnostic_card
         holder.exp.text = currentItem.experience
         holder.date.text = currentItem.date_order
-        holder.price.text = currentItem.price.toString()
+        holder.price.text = currentItem.price.toString()+" сом"
         holder.date_start.text = currentItem.date_order
         holder.period.text = currentItem.period
-
-
         holder.date_end.text = currentItem.date_order_end
 
     }
@@ -51,10 +45,6 @@ class OsagoAdapter(private val osagoList: ArrayList<Osago>): RecyclerView.Adapte
         val name:TextView = itemView.findViewById(R.id.insurance_name_osago)
         val type:TextView = itemView.findViewById(R.id.insurance_type_osago)
         val foreign:TextView = itemView.findViewById(R.id.insurance_foreign_osago)
-
-
-
-
         val diagnostic:TextView = itemView.findViewById(R.id.insurance_diagnostic_osago)
         val exp:TextView = itemView.findViewById(R.id.insurance_exp_osago)
         val date:TextView = itemView.findViewById(R.id.insurance_date_osago)

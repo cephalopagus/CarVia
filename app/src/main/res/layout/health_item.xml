@@ -52,7 +52,7 @@
                     android:text="C  ">
                 </TextView>
                 <TextView
-                    android:id="@+id/insurance_date_start_osago"
+                    android:id="@+id/insurance_date_start_health"
                     android:fontFamily="@font/ubuntu_bold"
                     android:textSize="18dp"
                     android:layout_width="wrap_content"
@@ -68,7 +68,7 @@
                     android:text="  ПО  ">
                 </TextView>
                 <TextView
-                    android:id="@+id/insurance_date_end_osago"
+                    android:id="@+id/insurance_date_end_health"
                     android:fontFamily="@font/ubuntu_bold"
                     android:textSize="18dp"
                     android:gravity="end"
@@ -92,7 +92,7 @@
                 android:text="Страхователь (полное наименование гражданина):">
             </TextView>
             <TextView
-                android:id="@+id/insurance_name_osago"
+                android:id="@+id/insurance_name_health"
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/ubuntu_bold"
                 android:textSize="18dp"
@@ -101,6 +101,7 @@
                 android:text="Бакаев Дастан Жолдошбекович">
             </TextView>
         </LinearLayout>
+
         <LinearLayout
             android:layout_marginTop="30dp"
             android:layout_width="match_parent"
@@ -111,16 +112,16 @@
                 android:textSize="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Вид транспортного средства:">
+                android:text="Дата рождения:">
             </TextView>
             <TextView
-                android:id="@+id/insurance_type_osago"
+                android:id="@+id/insurance_birth_health"
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/ubuntu_bold"
                 android:textSize="18dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Легковое авто - до 2.0 л">
+                android:text="00.00.0000">
             </TextView>
         </LinearLayout>
         <LinearLayout
@@ -133,19 +134,20 @@
                 android:textSize="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Транспортное средство зарегистрировано в
-                иностранном государстве:">
+                android:text="Серия и номер паспорта:">
             </TextView>
             <TextView
-                android:id="@+id/insurance_foreign_osago"
+                android:id="@+id/insurance_pasport_health"
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/ubuntu_bold"
                 android:textSize="18dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Да">
+                android:text="1111111">
             </TextView>
         </LinearLayout>
+
+
         <LinearLayout
             android:layout_marginTop="30dp"
             android:layout_width="match_parent"
@@ -156,18 +158,20 @@
                 android:textSize="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Диагностическая карта:">
+                android:text="Дата выдачи:">
             </TextView>
             <TextView
-                android:id="@+id/insurance_diagnostic_osago"
+                android:id="@+id/insurance_pasport_date_health"
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/ubuntu_bold"
                 android:textSize="18dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Имеется">
+                android:text="00.00.0000">
             </TextView>
         </LinearLayout>
+
+
         <LinearLayout
             android:layout_marginTop="30dp"
             android:layout_width="match_parent"
@@ -178,18 +182,19 @@
                 android:textSize="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Возраст и стаж водителя:">
+                android:text="Орган выдачи:">
             </TextView>
             <TextView
-                android:id="@+id/insurance_exp_osago"
+                android:id="@+id/insurance_pasport_house_health"
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/ubuntu_bold"
                 android:textSize="18dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="От 25 лет, стаж до 3х лет">
+                android:text="УФМС">
             </TextView>
         </LinearLayout>
+
         <LinearLayout
             android:layout_marginTop="30dp"
             android:layout_width="match_parent"
@@ -200,18 +205,43 @@
                 android:textSize="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Срок страхования:">
+                android:text="Идентификационный номер налогоплательщика:">
             </TextView>
             <TextView
-                android:id="@+id/insurance_period_osago"
+                android:id="@+id/insurance_pasport_id_health"
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/ubuntu_bold"
                 android:textSize="18dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="От 5 до 15 дней">
+                android:text="1212121212121212">
             </TextView>
         </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:fontFamily="@font/ubuntu_regular"
+                android:textSize="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Адрес проживания:">
+            </TextView>
+            <TextView
+                android:id="@+id/insurance_address_health"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:textSize="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Бишкек">
+            </TextView>
+        </LinearLayout>
+
         <LinearLayout
             android:layout_marginTop="40dp"
             android:layout_width="match_parent"
@@ -231,7 +261,7 @@
                 </TextView>
 
                 <TextView
-                    android:id="@+id/insurance_price_osago"
+                    android:id="@+id/insurance_price_health"
                     android:fontFamily="@font/ubuntu_bold"
                     android:textSize="18dp"
                     android:textAlignment="textEnd"
@@ -264,7 +294,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <TextView
-                    android:id="@+id/insurance_date_osago"
+                    android:id="@+id/insurance_date_health"
                     android:fontFamily="@font/ubuntu_bold"
                     android:textSize="18dp"
                     android:textAlignment="textEnd"
@@ -278,7 +308,6 @@
         </LinearLayout>
 
     </LinearLayout>
-
 
 
 </androidx.cardview.widget.CardView>

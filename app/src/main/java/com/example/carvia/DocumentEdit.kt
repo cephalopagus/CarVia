@@ -6,11 +6,10 @@ import android.os.Bundle
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.cardview.widget.CardView
-import androidx.recyclerview.widget.RecyclerView
-import com.example.carvia.insurance.db.Osago
-import com.google.android.material.button.MaterialButton
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DatabaseReference
+import com.example.carvia.list_edit.DocumentListEditHealth
+import com.example.carvia.list_edit.DocumentListEditKasko
+import com.example.carvia.list_edit.DocumentListEditOsago
+import com.example.carvia.list_edit.DocumentListEditProperty
 
 class DocumentEdit : AppCompatActivity() {
 
@@ -31,15 +30,27 @@ class DocumentEdit : AppCompatActivity() {
 
 
         osago_btn.setOnClickListener {
-            startActivity(Intent(this, DocumentListEdit::class.java).apply {
+            startActivity(Intent(this, DocumentListEditOsago::class.java).apply {
                 putExtra("UID", uid)
             })
 
 
         }
-        kasko_btn.setOnClickListener {  }
-        health_btn.setOnClickListener {  }
-        property_btn.setOnClickListener {  }
+        kasko_btn.setOnClickListener {
+            startActivity(Intent(this, DocumentListEditKasko::class.java).apply {
+                putExtra("UID", uid)
+            })
+        }
+        health_btn.setOnClickListener {
+            startActivity(Intent(this, DocumentListEditHealth::class.java).apply {
+                putExtra("UID", uid)
+            })
+        }
+        property_btn.setOnClickListener {
+            startActivity(Intent(this, DocumentListEditProperty::class.java).apply {
+                putExtra("UID", uid)
+            })
+        }
 
 
 

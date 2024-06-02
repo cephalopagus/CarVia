@@ -49,15 +49,399 @@
                 app:startIconDrawable="@drawable/ic_person">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/full_name_input"
+                    android:id="@+id/name_property"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textCapWords"></com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_bold"
+                android:text="Дата рождения:"
+                android:textSize="20dp">
+            </TextView>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fullffffffffff"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Укажите дату"
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusBottomEnd="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:startIconDrawable="@drawable/baseline_calendar_month_24">
+
+                <com.santalu.maskara.widget.MaskEditText
+                    android:id="@+id/birth_property"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    app:mask="__.__.____"
+                    app:maskStyle="persistent">
+                </com.santalu.maskara.widget.MaskEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_bold"
+                android:text="Телефон:"
+                android:textSize="20dp">
+            </TextView>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/phone_num_input_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusBottomEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:hint="Номер телефона"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/email_input_layout"
+                app:startIconDrawable="@drawable/ic_phone">
+
+                <com.santalu.maskara.widget.MaskEditText
+                    android:id="@+id/phone_property"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    app:mask="+996 (___) __ __ __"
+                    app:maskStyle="persistent">
+                </com.santalu.maskara.widget.MaskEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_bold"
+                android:text="Ваша почта:"
+                android:textSize="20dp">
+            </TextView>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fullfffffffff"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusBottomEnd="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:startIconDrawable="@drawable/ic_email">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email_property"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"></com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_bold"
+                android:text="Серия и номер паспорта:"
+                android:textSize="20dp">
+            </TextView>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fullffffffff"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Данные паспорта"
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusBottomEnd="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:startIconDrawable="@drawable/baseline_article_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/pasport_property"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapCharacters"></com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_bold"
+                android:text="Дата выдачи:"
+                android:textSize="20dp">
+            </TextView>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fullfffffff"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Укажите дату"
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusBottomEnd="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:startIconDrawable="@drawable/baseline_calendar_month_24">
+
+                <com.santalu.maskara.widget.MaskEditText
+                    android:id="@+id/pasport_date_property"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    app:mask="__.__.____"
+                    app:maskStyle="persistent">
+                </com.santalu.maskara.widget.MaskEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_bold"
+                android:text="Кем выдан:"
+                android:textSize="20dp">
+            </TextView>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fullfffffffffffffefs"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Орган выдачи"
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusBottomEnd="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:startIconDrawable="@drawable/baseline_home_work_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/pasport_house_property"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapSentences"></com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_bold"
+                android:text="Индивидуальный идентификационный номер:"
+                android:textSize="20dp">
+            </TextView>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fullfffffffffffffefsfe"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="ИНН"
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusBottomEnd="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:startIconDrawable="@drawable/baseline_article_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/pasport_id_property"
+                    android:layout_width="match_parent"
+                    android:maxLength="12"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"></com.google.android.material.textfield.TextInputEditText>
             </com.google.android.material.textfield.TextInputLayout>
 
 
 
 
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_bold"
+                android:text="Адрес постоянной прописки:"
+                android:textSize="20dp">
+            </TextView>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fulfffffffffefsfe"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Г., ул., д., кв."
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusBottomEnd="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:startIconDrawable="@drawable/ic_home_black_24dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/address_property"
+                    android:layout_width="match_parent"
+                    android:maxLength="12"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapSentences"></com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_bold"
+                android:text="Сумма покрытия:"
+                android:textSize="20dp">
+            </TextView>
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_regular"
+                android:text="Отделка и оборудование:"
+                android:textSize="18dp">
+            </TextView>
+            <SeekBar
+                android:id="@+id/sliderbar_one_property"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </SeekBar>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:text="Размер - "
+                    android:textSize="17dp">
+                </TextView>
+                <TextView
+                    android:id="@+id/sum_one_property"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:text="200000"
+                    android:textSize="17dp">
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:text=" СОМ"
+                    android:textSize="17dp">
+                </TextView>
+            </LinearLayout>
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_regular"
+                android:text="Домашнее имущество:"
+                android:textSize="18dp">
+            </TextView>
+            <SeekBar
+                android:id="@+id/sliderbar_two_property"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </SeekBar>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:text="Размер - "
+                    android:textSize="17dp">
+                </TextView>
+                <TextView
+                    android:id="@+id/sum_two_property"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:text="100000"
+                    android:textSize="17dp">
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:text=" СОМ"
+                    android:textSize="17dp">
+                </TextView>
+            </LinearLayout>
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_regular"
+                android:text="Ответственность перед соседями:"
+                android:textSize="18dp">
+            </TextView>
+            <SeekBar
+                android:id="@+id/sliderbar_three_property"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </SeekBar>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:text="Размер - "
+                    android:textSize="17dp">
+                </TextView>
+                <TextView
+                    android:id="@+id/sum_three_property"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:text="100000"
+                    android:textSize="17dp">
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:text=" СОМ"
+                    android:textSize="17dp">
+                </TextView>
+            </LinearLayout>
 
 
 
@@ -82,13 +466,14 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <TextView
+                        android:id="@+id/price_property"
                         android:layout_marginTop="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/ubuntu_bold"
                         android:textColor="@color/white"
                         android:layout_marginLeft="20dp"
-                        android:text="2900"
+                        android:text="0"
                         android:textSize="23dp">
                     </TextView>
                     <TextView
@@ -105,29 +490,42 @@
 
 
             </LinearLayout>
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <LinearLayout
                 android:layout_marginTop="15dp"
-                android:fontFamily="@font/ubuntu_regular"
-                android:padding="10dp"
-                android:text="ОФОРМИТЬ"
-                android:textSize="20dp"
-                app:cornerRadius="10dp"
-                android:layout_gravity="end"
-                app:strokeColor="@color/background"
-                app:strokeWidth="2dp"
-                android:layout_marginBottom="25dp"
-                android:textColor="@color/background"
-                android:backgroundTint="@color/white"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/password_input_layout_auth" />
-
-
-
-
-
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_calculate_property"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:padding="10dp"
+                    android:layout_marginRight="50dp"
+                    android:text="ПОСЧИТАТЬ"
+                    android:textSize="20dp"
+                    app:cornerRadius="10dp"
+                    android:layout_gravity="end"
+                    app:strokeColor="@color/background"
+                    app:strokeWidth="2dp"
+                    android:layout_marginBottom="25dp"
+                    android:textColor="@color/background"
+                    android:backgroundTint="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_create_property"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:padding="10dp"
+                    android:text="ОФОРМИТЬ"
+                    android:textSize="20dp"
+                    app:cornerRadius="10dp"
+                    android:layout_marginBottom="25dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </LinearLayout>
         </LinearLayout>
 
 

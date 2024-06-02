@@ -27,6 +27,7 @@ android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
+                android:text="Пользователь Пользователевич"
                 android:id="@+id/get_name"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/ubuntu_regular"
@@ -34,7 +35,7 @@ android:orientation="vertical"
                 android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Керимов Адис Канатович"></TextView>
+                ></TextView>
         </LinearLayout>
         <LinearLayout
             android:orientation="vertical"
@@ -50,12 +51,12 @@ android:orientation="vertical"
             </TextView>
             <TextView
                 android:id="@+id/get_phone"
-
+                android:text="+996 000 00 00 00"
                 android:fontFamily="@font/ubuntu_regular"
                 android:textSize="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="+996 (123) 45 67 89">
+                >
             </TextView>
 
         </LinearLayout>
@@ -72,12 +73,13 @@ android:orientation="vertical"
                 android:text="Электронная почта:">
             </TextView>
             <TextView
+                android:text="почта@"
                 android:id="@+id/get_email"
                 android:fontFamily="@font/ubuntu_regular"
                 android:textSize="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="test@gmail.com">
+                >
             </TextView>
 
         </LinearLayout>
@@ -140,7 +142,7 @@ android:orientation="vertical"
             android:backgroundTint="#3F60B4"
             android:fontFamily="@font/ubuntu_regular"
             android:padding="10dp"
-            android:text="Адмиская панель"
+            android:text="Админская панель"
             android:textSize="20dp"
             app:cornerRadius="10dp"
             app:layout_constraintBottom_toBottomOf="parent"

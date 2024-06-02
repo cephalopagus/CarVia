@@ -5,14 +5,15 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.carvia.ListOsago
+import com.example.carvia.lists.ListProperty
+import com.example.carvia.lists.ListOsago
 import com.example.carvia.R
 import com.example.carvia.databinding.DocumentDashboardBinding
-import com.example.carvia.insurance.CreatingInsuranceOsago
+import com.example.carvia.lists.ListHealth
+import com.example.carvia.lists.ListKasko
 
 class DashboardFragment : Fragment() {
 
@@ -44,18 +45,20 @@ class DashboardFragment : Fragment() {
         btn_osago.setOnClickListener {
             startActivity(Intent(requireContext(), ListOsago::class.java))
         }
-//        val btn_kasko = view.findViewById<CardView>(R.id.recycler_kasko)
-//        btn_kasko.setOnClickListener {
-//            startActivity(Intent(requireContext(), ListKasko::class.java))
-//        }
-//        val btn_health = view.findViewById<CardView>(R.id.recycler_health)
-//        btn_health.setOnClickListener {
-//            startActivity(Intent(requireContext(), ListHealth::class.java))
-//        }
-//        val btn_property = view.findViewById<CardView>(R.id.recycler_property)
-//        btn_property.setOnClickListener {
-//            startActivity(Intent(requireContext(), ListProperty::class.java))
-//        }
+        val btn_kasko = view.findViewById<CardView>(R.id.recycler_kasko)
+        btn_kasko.setOnClickListener {
+            startActivity(Intent(requireContext(), ListKasko::class.java))
+        }
+        val btn_health = view.findViewById<CardView>(R.id.recycler_health)
+        btn_health.setOnClickListener {
+            startActivity(Intent(requireContext(), ListHealth::class.java))
+        }
+
+
+        val btn_property = view.findViewById<CardView>(R.id.recycler_property)
+        btn_property.setOnClickListener {
+            startActivity(Intent(requireContext(), ListProperty::class.java))
+        }
     }
 
     override fun onDestroyView() {
