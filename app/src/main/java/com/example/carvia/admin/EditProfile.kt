@@ -1,4 +1,4 @@
-package com.example.carvia
+package com.example.carvia.admin
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +7,7 @@ import android.view.WindowManager
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
+import com.example.carvia.R
 import com.example.carvia.auth.Users
 import com.google.android.material.button.MaterialButton
 import com.google.firebase.auth.FirebaseAuth

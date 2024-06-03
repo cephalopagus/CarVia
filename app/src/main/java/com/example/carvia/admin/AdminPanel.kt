@@ -1,28 +1,24 @@
-package com.example.carvia
+package com.example.carvia.admin
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
 import android.widget.SearchView
-import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.carvia.MainActivity
+import com.example.carvia.R
 import com.example.carvia.adapter.AdminUserAdapter
-import com.example.carvia.adapter.OsagoAdapter
 import com.example.carvia.auth.Users
-import com.example.carvia.insurance.db.Osago
 import com.google.android.material.button.MaterialButton
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.Query
 import com.google.firebase.database.ValueEventListener
-import java.util.Locale
 
 class AdminPanel : AppCompatActivity(), AdminUserAdapter.ClickListener {
     private lateinit var database: FirebaseDatabase

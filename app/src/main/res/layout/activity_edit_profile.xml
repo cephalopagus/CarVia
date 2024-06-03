@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
 
     android:background="#F7F7F7"
-    tools:context=".EditProfile">
+    tools:context=".admin.EditProfile">
 
     <androidx.cardview.widget.CardView
         android:layout_marginTop="60dp"

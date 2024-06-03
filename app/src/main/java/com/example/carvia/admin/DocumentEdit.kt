@@ -1,4 +1,4 @@
-package com.example.carvia
+package com.example.carvia.admin
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.cardview.widget.CardView
+import com.example.carvia.R
 import com.example.carvia.list_edit.DocumentListEditHealth
 import com.example.carvia.list_edit.DocumentListEditKasko
 import com.example.carvia.list_edit.DocumentListEditOsago

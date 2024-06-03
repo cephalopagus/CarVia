@@ -6,7 +6,7 @@
 
     android:background="#F7F7F7"
     android:layout_height="match_parent"
-    tools:context=".DocumentEdit">
+    tools:context=".admin.DocumentEdit">
 
     <androidx.cardview.widget.CardView
         android:layout_marginTop="60dp"

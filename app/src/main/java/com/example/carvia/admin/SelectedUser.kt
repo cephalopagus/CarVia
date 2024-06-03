@@ -1,4 +1,4 @@
-package com.example.carvia
+package com.example.carvia.admin
 
 import android.app.Dialog
 import android.content.Intent
@@ -10,11 +10,9 @@ import android.view.WindowManager
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
+import com.example.carvia.R
 import com.google.android.material.button.MaterialButton
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.collection.LLRBNode.Color
 
 class SelectedUser : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

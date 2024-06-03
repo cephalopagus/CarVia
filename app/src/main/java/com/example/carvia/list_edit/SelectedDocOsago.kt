@@ -7,7 +7,7 @@ import android.view.WindowManager
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
-import com.example.carvia.AdminPanel
+import com.example.carvia.admin.AdminPanel
 import com.example.carvia.R
 import com.example.carvia.insurance.db.Osago
 import com.google.android.material.button.MaterialButton

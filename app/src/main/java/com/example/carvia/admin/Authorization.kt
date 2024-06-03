@@ -6,14 +6,12 @@ import android.os.Bundle
 import android.view.WindowManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
-import com.example.carvia.AdminPanel
 import com.example.carvia.MainActivity
 import com.example.carvia.R
 import com.example.carvia.WelcomeScreen
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.FirebaseDatabase
 
 class Authorization : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
@@ -33,7 +31,7 @@ class Authorization : AppCompatActivity() {
 
 
         btn_back.setOnClickListener {
-            startActivity(Intent(this, WelcomeScreen::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
         }
         auth_btn.setOnClickListener {
             val email = auth_login.text.toString()

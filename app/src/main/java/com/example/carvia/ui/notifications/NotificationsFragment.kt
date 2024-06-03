@@ -6,10 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.carvia.AdminPanel
 import com.example.carvia.R
 import com.example.carvia.WelcomeScreen
 import com.example.carvia.adapter.OsagoAdapter
@@ -18,8 +16,6 @@ import com.example.carvia.databinding.AccountNotificationsBinding
 import com.google.android.material.button.MaterialButton
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
-import java.text.SimpleDateFormat
-import java.util.Date
 
 class NotificationsFragment : Fragment() {
     private lateinit var auth: FirebaseAuth
@@ -83,7 +79,7 @@ class NotificationsFragment : Fragment() {
         val admin_btn: MaterialButton = view.findViewById(R.id.btn_admin_panel)
 
         admin_btn.setOnClickListener {
-            startActivity(Intent(context, AdminPanel::class.java))
+            startActivity(Intent(context, Authorization::class.java))
         }
     }
 

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
 
     android:background="#F7F7F7"
-    tools:context=".SelectedUser">
+    tools:context=".admin.SelectedUser">
     <LinearLayout
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="60dp"

@@ -46,18 +46,18 @@
             android:name=".list_edit.DocumentListEditOsago"
             android:exported="false" />
         <activity
-            android:name=".DocumentEdit"
+            android:name=".admin.DocumentEdit"
             android:exported="false" />
         <activity
-            android:name=".EditProfile"
+            android:name=".admin.EditProfile"
             android:exported="false"
             android:windowSoftInputMode="adjustPan|adjustResize" />
         <activity
-            android:name=".SelectedUser"
+            android:name=".admin.SelectedUser"
             android:exported="false"
             android:windowSoftInputMode="adjustPan|adjustResize" />
         <activity
-            android:name=".AdminPanel"
+            android:name=".admin.AdminPanel"
             android:exported="false"
             android:windowSoftInputMode="adjustPan|adjustResize" />
         <activity
