@@ -214,7 +214,6 @@
             android:layout_gravity="center"
             app:strokeColor="@android:color/holo_red_light"
             app:strokeWidth="2dp"
-            android:layout_marginBottom="25dp"
             android:textColor="@android:color/holo_red_light"
             android:backgroundTint="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
@@ -222,6 +221,7 @@
 
 
     </LinearLayout>
+
 
 
 

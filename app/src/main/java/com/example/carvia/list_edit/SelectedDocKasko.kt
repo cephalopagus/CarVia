@@ -41,6 +41,16 @@ class SelectedDocKasko : AppCompatActivity() {
         var phone = " "
         var date_order = " "
         var date_order_end = " "
+        val btn_dlt:MaterialButton = findViewById(R.id.delete_kasko)
+        btn_dlt.setOnClickListener {
+            database.reference.child("kasko").child(id).removeValue().
+            addOnSuccessListener {
+                startActivity(Intent(this, AdminPanel::class.java))
+                Toast.makeText(this, "Полис удален!", Toast.LENGTH_LONG).show()
+            }.addOnCanceledListener {
+                Toast.makeText(this, "Ошибка!", Toast.LENGTH_LONG).show()
+            }
+        }
 
 
         database.reference.child("kasko").child(id).get().addOnSuccessListener {

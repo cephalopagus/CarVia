@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.carvia.R
 import com.example.carvia.WelcomeScreen
 import com.example.carvia.adapter.OsagoAdapter
+import com.example.carvia.admin.AdminPanel
 import com.example.carvia.admin.Authorization
 import com.example.carvia.databinding.AccountNotificationsBinding
 import com.google.android.material.button.MaterialButton

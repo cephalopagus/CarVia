@@ -1,5 +1,4 @@
 package com.example.carvia.insurance.db
-
 data class Kasko(
     var uid:String?=null,
     var name:String?=null,
@@ -12,3 +11,8 @@ data class Kasko(
     val date_order_end: String?=null,
     var price: Float? =null,
     var id: String? =null)
+
+
+
+
+

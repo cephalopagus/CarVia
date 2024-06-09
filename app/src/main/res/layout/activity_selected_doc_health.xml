@@ -236,38 +236,48 @@
 
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:orientation="horizontal">
-
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/complete_btn_doc_edit_health"
-                        android:layout_width="match_parent"
-                        android:backgroundTint="#3F60B4"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="76dp"
-                        android:fontFamily="@font/ubuntu_regular"
-                        android:padding="10dp"
-                        android:text="редактировать"
-                        android:textSize="20dp"
-                        app:cornerRadius="10dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/password_input_layout_auth" />
-                </LinearLayout>
-
-            </LinearLayout>
 
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/complete_btn_doc_edit_health"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="#3F60B4"
+            android:fontFamily="@font/ubuntu_regular"
+            android:padding="10dp"
+            android:text="редактировать"
+            android:textSize="20dp"
+            app:cornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password_input_layout_auth" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/delete_health"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:fontFamily="@font/ubuntu_regular"
+            android:padding="10dp"
+            android:text="Удалить"
+            android:textSize="20dp"
+            app:cornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView3">
+        </com.google.android.material.button.MaterialButton>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

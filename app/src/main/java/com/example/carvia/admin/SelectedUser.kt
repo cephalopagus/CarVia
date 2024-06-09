@@ -11,6 +11,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
 import com.example.carvia.R
+import com.example.carvia.support.MessageCheck
 import com.google.android.material.button.MaterialButton
 import com.google.firebase.database.FirebaseDatabase
 
@@ -30,6 +31,13 @@ class SelectedUser : AppCompatActivity() {
         val edit_profile_btn : MaterialButton  = findViewById(R.id.edit_profile_btn)
         val edit_doc_btn : MaterialButton  = findViewById(R.id.edit_document_btn)
         val delete_profile_btn : MaterialButton  = findViewById(R.id.delete_profile_btn)
+        val check_msg_btn : MaterialButton  = findViewById(R.id.check_msg_btn)
+
+        check_msg_btn.setOnClickListener {
+            startActivity(Intent(this, MessageCheck::class.java).apply {
+                putExtra("UID", uid)
+            })
+        }
 
         edit_profile_btn.setOnClickListener {
             startActivity(Intent(this, EditProfile::class.java).apply {

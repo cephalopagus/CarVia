@@ -49,6 +49,16 @@ class SelectedDocProperty : AppCompatActivity() {
         var date_order = " "
         var date_order_end = " "
         var email = " "
+        val btn_dlt:MaterialButton = findViewById(R.id.delete_property)
+        btn_dlt.setOnClickListener {
+            database.reference.child("property").child(id).removeValue().
+            addOnSuccessListener {
+                startActivity(Intent(this, AdminPanel::class.java))
+                Toast.makeText(this, "Полис удален!", Toast.LENGTH_LONG).show()
+            }.addOnCanceledListener {
+                Toast.makeText(this, "Ошибка!", Toast.LENGTH_LONG).show()
+            }
+        }
 
 
         database.reference.child("property").child(id).get().addOnSuccessListener {

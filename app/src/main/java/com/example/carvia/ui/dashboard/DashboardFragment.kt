@@ -11,9 +11,11 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.carvia.lists.ListProperty
 import com.example.carvia.lists.ListOsago
 import com.example.carvia.R
+import com.example.carvia.support.SupportForm
 import com.example.carvia.databinding.DocumentDashboardBinding
 import com.example.carvia.lists.ListHealth
 import com.example.carvia.lists.ListKasko
+import com.google.android.material.button.MaterialButton
 
 class DashboardFragment : Fragment() {
 
@@ -58,6 +60,10 @@ class DashboardFragment : Fragment() {
         val btn_property = view.findViewById<CardView>(R.id.recycler_property)
         btn_property.setOnClickListener {
             startActivity(Intent(requireContext(), ListProperty::class.java))
+        }
+        val btn_sprt = view.findViewById<MaterialButton>(R.id.support)
+        btn_sprt.setOnClickListener {
+            startActivity(Intent(requireContext(), SupportForm::class.java))
         }
     }
 

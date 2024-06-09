@@ -45,6 +45,16 @@ class SelectedDocOsago : AppCompatActivity() {
         val set_per = findViewById<TextView>(R.id.editable_period_osago)
         val set_price = findViewById<TextView>(R.id.editable_price_osago)
         val btn:MaterialButton = findViewById(R.id.complete_btn_doc_edit)
+        val btn_dlt:MaterialButton = findViewById(R.id.delete_osago)
+        btn_dlt.setOnClickListener {
+            database.reference.child("osago").child(id).removeValue().
+            addOnSuccessListener {
+                startActivity(Intent(this, AdminPanel::class.java))
+                Toast.makeText(this, "Полис удален!", Toast.LENGTH_LONG).show()
+            }.addOnCanceledListener {
+                Toast.makeText(this, "Ошибка!", Toast.LENGTH_LONG).show()
+            }
+        }
 
 
         set_name.setText(name)

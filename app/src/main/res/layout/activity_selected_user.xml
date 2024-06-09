@@ -36,7 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Керимов Адис Канатович"
-                android:layout_marginBottom="120dp"></TextView>
+                android:layout_marginBottom="90dp"></TextView>
         </LinearLayout>
         <com.google.android.material.button.MaterialButton
             android:id="@+id/edit_profile_btn"
@@ -63,6 +63,21 @@
             android:fontFamily="@font/ubuntu_regular"
             android:padding="10dp"
             android:text="редактировать документы"
+            android:textSize="20dp"
+            app:cornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnLogout" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/check_msg_btn"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#3F60B4"
+            android:fontFamily="@font/ubuntu_regular"
+            android:padding="10dp"
+            android:text="сообщение техподдержке"
             android:textSize="20dp"
             app:cornerRadius="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
