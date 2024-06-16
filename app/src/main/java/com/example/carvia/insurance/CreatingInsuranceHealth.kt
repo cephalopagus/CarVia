@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatDelegate
 import com.example.carvia.MainActivity
 import com.example.carvia.R
 import com.example.carvia.insurance.db.Health
+import com.example.carvia.list_edit.SelectedDocProperty
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
@@ -111,8 +112,9 @@ class CreatingInsuranceHealth : AppCompatActivity() {
                 passport_house, passport_id, address, currentDate.toString(), end_date.toString(), price_total, db_id)
 
             database.setValue(health).addOnSuccessListener {
-                Toast.makeText(this,"Документ оформлен!", Toast.LENGTH_LONG).show()
-                val intent= Intent(this, MainActivity::class.java)
+
+                val intent = Intent(this, Payment::class.java)
+                intent.putExtra("Price", price_total.toString())
                 startActivity(intent)
                 finish()
             }.addOnFailureListener {

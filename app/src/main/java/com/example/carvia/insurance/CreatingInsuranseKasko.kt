@@ -126,8 +126,8 @@ class CreatingInsuranseKasko : AppCompatActivity() {
             val kasko = Kasko(auth.currentUser!!.uid, name, phone, model, year,
                 price_a, procent,currentDate.toString(), end_date.toString(), price_total, db_id)
             database.setValue(kasko).addOnCompleteListener{
-                Toast.makeText(this,"Документ оформлен!", Toast.LENGTH_LONG).show()
-                val intent= Intent(this, MainActivity::class.java)
+                val intent = Intent(this, Payment::class.java)
+                intent.putExtra("Price", price_total.toString())
                 startActivity(intent)
                 finish()
             }.addOnFailureListener {

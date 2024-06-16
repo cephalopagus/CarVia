@@ -55,9 +55,6 @@ class NotificationsFragment : Fragment() {
 
                 val set_email = view.findViewById<TextView>(R.id.get_email)
                 val email = it.child("email").value.toString()
-
-
-
                 set_name.setText(name)
                 set_phone.setText(phone)
                 set_email.setText(email)

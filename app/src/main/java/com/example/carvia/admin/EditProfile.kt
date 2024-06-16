@@ -59,7 +59,7 @@ class EditProfile : AppCompatActivity() {
             val users: Users = Users(name.toString(),email.toString(), phone.toString(),uid)
             database.reference.child("users").child(uid).setValue(users)
                 .addOnSuccessListener {
-                startActivity(Intent(this, AdminPanel::class.java))
+
                 Toast.makeText(this, "Данные обновлнены!",
                     Toast.LENGTH_LONG).show()
             }.addOnCanceledListener {

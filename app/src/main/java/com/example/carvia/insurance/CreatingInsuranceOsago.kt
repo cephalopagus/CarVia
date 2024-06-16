@@ -155,8 +155,8 @@ class CreatingInsuranceOsago : AppCompatActivity() {
                 type.toString(),diagnostic.toString(), foreign.toString(),
                 exp.toString(), period.toString(),currentDate.toString(), end_date.toString(), price_total, db_id)
             database.setValue(osago).addOnCompleteListener{
-                Toast.makeText(this,"Документ оформлен!", Toast.LENGTH_LONG).show()
-                val intent= Intent(this,MainActivity::class.java)
+                val intent = Intent(this, Payment::class.java)
+                intent.putExtra("Price", price_total.toString())
                 startActivity(intent)
                 finish()
             }.addOnFailureListener {

@@ -12,6 +12,8 @@ import com.example.carvia.WelcomeScreen
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
+import java.math.BigInteger
+import java.security.MessageDigest
 
 class Authorization : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
@@ -36,9 +38,13 @@ class Authorization : AppCompatActivity() {
         auth_btn.setOnClickListener {
             val email = auth_login.text.toString()
             val password = auth_password.text.toString()
+            val hash = "21232f297a57a5a743894a0e4a801fc3"
+
             if (email.isEmpty() || password.isEmpty()){
+                auth_login.error = "Введите данные"
+                auth_password.error = "Введите данные"
                 Toast.makeText(this, "Не оставляйте поля пустыми", Toast.LENGTH_LONG).show()
-            }else if (email.equals("admin") && password.equals("admin")){
+            }else if (hash == md5(email) && hash == md5(password)){
                 startActivity(Intent(this, AdminPanel::class.java))
             }
             else{
@@ -46,8 +52,9 @@ class Authorization : AppCompatActivity() {
                 Toast.makeText(this, "Отказано в доступе!", Toast.LENGTH_LONG).show()
             }
         }
-
-
-
+    }
+    fun md5(password:String):String{
+        val md = MessageDigest.getInstance("MD5")
+        return BigInteger(1, md.digest(password.toByteArray())).toString(16).padStart(32, '0')
     }
 }
