@@ -21,10 +21,8 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
 class AdminPanel : AppCompatActivity(), AdminUserAdapter.ClickListener {
-    private lateinit var database: FirebaseDatabase
 
     private lateinit var auth: FirebaseAuth
-
     private lateinit var dbref: DatabaseReference
     private lateinit var userRecyclerView: RecyclerView
     private lateinit var userArrayList: ArrayList<Users>
@@ -46,26 +44,18 @@ class AdminPanel : AppCompatActivity(), AdminUserAdapter.ClickListener {
         val back_btn: MaterialButton = findViewById(R.id.back_btn)
         back_btn.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
+            finish()
         }
-
-
-
-
         val searchV:SearchView = findViewById(R.id.searchView)
         searchV.setOnQueryTextListener(object :SearchView.OnQueryTextListener{
             override fun onQueryTextSubmit(query: String?): Boolean {
                 return false
             }
-
             override fun onQueryTextChange(newText: String): Boolean {
                 searchList(newText)
                 return true
             }
-
         })
-
-
-
     }
     fun searchList(text:String){
         val searchList = ArrayList<Users>()
